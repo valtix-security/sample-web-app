@@ -36,7 +36,8 @@ from flask import Flask, request
 app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST', 'PUT', 'DELETE'])
-def index():
+@app.route('/<path:path>', methods=['GET', 'POST', 'PUT', 'DELETE'])
+def index(path=""):
     hdrs = dict(request.headers)
     hdrs['Method'] = request.method
     hdrs['Client'] = request.remote_addr
