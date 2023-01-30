@@ -10,7 +10,7 @@ A sample web application to run on a VM
 
 # Run the script as root user on ubuntu host
 ```
-bash setup_spoke_vm.sh
+sudo bash setup_spoke_vm.sh
 curl localhost
 curl -k https://localhost
 ```
