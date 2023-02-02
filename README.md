@@ -14,3 +14,10 @@ sudo bash setup_spoke_vm.sh
 curl localhost
 curl -k https://localhost
 ```
+
+# Running in a container
+```
+cd container
+docker build -t app .
+docker run -d --rm -p 8000:80 -p 8443:443 app
+```
