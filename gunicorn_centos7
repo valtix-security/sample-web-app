@@ -1,3 +1,4 @@
+# To run the app using gunicorn directly without going through nginx, to simulate longer time outs etc
 systemctl stop nginx
 systemctl stop restapp
 cd /svc
