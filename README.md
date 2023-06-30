@@ -10,10 +10,36 @@ A sample web application to run on a VM
 
 # Run the script as root user on ubuntu host
 ```
-sudo bash setup_spoke_vm.sh
+bash setup_ubuntu_vm.sh
 curl localhost
 curl -k https://localhost
 ```
+
+# To run flask app as root user without going through nginx proxy
+```
+bash gunicorn_ubuntu.sh
+```
+
+# Run the script as root user on centos 7 host
+```
+sudo bash setup_centos7_vm.sh
+curl localhost
+curl -k https://localhost
+```
+
+# To run flask app as root user without going through nginx proxy
+```
+bash gunicorn_centos7.sh
+```
+
+# To run flask app via nginx
+```
+ps -ef | grep gunicorn
+kill the parent gunicorn process
+systemctl start nginx
+systemctl start restapp
+```
+
 
 # Running in a container
 ```
