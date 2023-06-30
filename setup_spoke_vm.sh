@@ -19,7 +19,7 @@ server {
         proxy_ssl_name \$host;
         proxy_pass http://localhost:8000;
         proxy_set_header Host \$host;
-        proxy_set_header sni $ssl_server_name;
+        proxy_set_header sni \$ssl_server_name;
         proxy_set_header x-forwarded-for \$proxy_add_x_forwarded_for;
         #try_files \$uri \$uri/ =404;
     }
